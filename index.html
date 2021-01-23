@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Current map - Apex Legends</title>
+
+        <style>
+            body {
+            margin: auto;
+            width: auto;
+            height: auto;
+            background-color: #23272a;
+            font-family: "Helvetica";
+            color: aliceblue;
+            text-align: center;
+            line-height: 3em;
+            transform: translateY(40%);
+            }
+        </style>
+    </head>
+
+    <body onload="apexMap()">
+        <h1>Current map - Apex Legends</h1>
+        <hr width="50%"><br>
+
+        <h1><p id="map"></p></h1>
+        <i><p id="timer"></p></i>
+        <br><small><p>Apex Legends : saison 7</p></small>
+
+        <script>
+            function apexMap() {
+                var cycle = ((new Date().getTime() / 60000) - 60) % 2200
+
+                var output
+
+                if (cycle < 90) {
+                    output = "Olympus"
+                    residual = 90 - cycle
+                } else if (cycle < 180) {
+                    output = "World Edge"
+                    residual = 180 - cycle
+                } else if (cycle < 240) {
+                    output = "Olympus"
+                    residual = 240 - cycle
+                } else if (cycle < 300) {
+                    output = "World Edge"
+                    residual = 300 - cycle
+                } else if (cycle < 360) {
+                    output = "Olympus"
+                    residual = 360 - cycle
+                } else if (cycle < 420) {
+                    output = "World Edge"
+                    residual = 420 - cycle
+                } else if (cycle < 540) {
+                    output = "Olympus"
+                    residual = 540 - cycle
+                } else if (cycle < 660) {
+                    output = "World Edge"
+                    residual = 660 - cycle
+                } else if (cycle < 750) {
+                    output = "Olympus"
+                    residual = 750 - cycle
+                } else if (cycle < 840) {
+                    output = "World Edge"
+                    residual = 840 - cycle
+                } else if (cycle < 960) {
+                    output = "Olympus"
+                    residual = 960 - cycle
+                } else if (cycle < 1080) {
+                    output = "World Edge"
+                    residual = 1080 - cycle
+                } else if (cycle < 1170) {
+                    output = "Olympus"
+                    residual = 1170 - cycle
+                } else if (cycle < 1260) {
+                    output = "World Edge"
+                    residual = 1260 - cycle
+                } else if (cycle < 1380) {
+                    output = "Olympus"
+                    residual = 1380 - cycle
+                } else if (cycle < 1500) {
+                    output = "World Edge"
+                    residual = 1500 - cycle
+                } else if (cycle < 1560) {
+                    output = "Olympus"
+                    residual = 1560 - cycle
+                } else if (cycle < 1620) {
+                    output = "World Edge"
+                    residual = 1620 - cycle
+                } else if (cycle < 1710) {
+                    output = "Olympus"
+                    residual = 1710 - cycle
+                } else if (cycle < 1800) {
+                    output = "World Edge"
+                    residual = 1800 - cycle
+                } else if (cycle < 1890) {
+                    output = "Olympus"
+                    residual = 1890 - cycle
+                } else if (cycle < 1980) {
+                    output = "World Edge"
+                    residual = 1980 - cycle
+                } else if (cycle < 2100) {
+                    output = "Olympus"
+                    residual = 2100 - cycle
+                } else {
+                    output = "World Edge"
+                    residual = 2220 - cycle
+                }
+
+                if (residual >= 60){
+                    hourResi = Math.trunc(residual) / 60
+                    minResi = residual - (Math.trunc(hourResi) * 60)
+                    if (hourResi >= 2){
+                        if (Math.trunc(minResi) <= 1){
+                            var timer = Math.trunc(hourResi) + " hours " + Math.trunc(minResi) +  " minute left"
+                        } else {
+                            var timer = Math.trunc(hourResi) + " hours " + Math.trunc(minResi) +  " minutes left"
+                        }
+                    } else {
+                        if (Math.trunc(minResi) <= 1){
+                            var timer = Math.trunc(hourResi) + " hour " + Math.trunc(minResi) +  " minute left"
+                        } else {
+                            var timer = Math.trunc(hourResi) + " hour " + Math.trunc(minResi) +  " minutes left"
+                        }
+                    }
+                } else if (residual <= 1){
+                        var timer = Math.trunc(residual) +  " minute left"
+                } else {
+                        var timer = Math.trunc(residual) +  " minutes left"
+                }
+                
+                document.getElementById("map").innerHTML = output
+                document.getElementById("timer").innerHTML = timer
+            }
+        </script>
+    </body>
+</html>
