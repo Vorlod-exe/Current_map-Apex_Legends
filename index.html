@@ -24,85 +24,88 @@
 
         <h1><p id="map"></p></h1>
         <i><p id="timer"></p></i>
-        <br><small><p>Apex Legends : saison 7</p></small>
+        <br><small><p>Apex Legends : season 8</p></small>
 
         <script>
             function apexMap() {
-                var cycle = ((new Date().getTime() / 60000) - 80) % 2200
+                var cycle = ((new Date().getTime() / 60000) - 320) % 2200
+
+		var map1 = "Kings Canyon"
+		var map2 = "Olympus"
 
                 var output
 
                 if (cycle < 90) {
-                    output = "Olympus"
+                    output = map1
                     residual = 90 - cycle
                 } else if (cycle < 180) {
-                    output = "World's Edge"
+                    output = map2
                     residual = 180 - cycle
                 } else if (cycle < 240) {
-                    output = "Olympus"
+                    output = map1
                     residual = 240 - cycle
                 } else if (cycle < 300) {
-                    output = "World's Edge"
+                    output = map2
                     residual = 300 - cycle
                 } else if (cycle < 360) {
-                    output = "Olympus"
+                    output = map1
                     residual = 360 - cycle
                 } else if (cycle < 420) {
-                    output = "World's Edge"
+                    output = map2
                     residual = 420 - cycle
                 } else if (cycle < 540) {
-                    output = "Olympus"
+                    output = map1
                     residual = 540 - cycle
                 } else if (cycle < 660) {
-                    output = "World's Edge"
+                    output = map2
                     residual = 660 - cycle
                 } else if (cycle < 750) {
-                    output = "Olympus"
+                    output = map1
                     residual = 750 - cycle
                 } else if (cycle < 840) {
-                    output = "World's Edge"
+                    output = Olympus
                     residual = 840 - cycle
                 } else if (cycle < 960) {
-                    output = "Olympus"
+                    output = map1
                     residual = 960 - cycle
                 } else if (cycle < 1080) {
-                    output = "World's Edge"
+                    output = map2
                     residual = 1080 - cycle
                 } else if (cycle < 1170) {
-                    output = "Olympus"
+                    output = map1
                     residual = 1170 - cycle
                 } else if (cycle < 1260) {
-                    output = "World's Edge"
+                    output = map2
                     residual = 1260 - cycle
                 } else if (cycle < 1380) {
-                    output = "Olympus"
+                    output = map1
                     residual = 1380 - cycle
                 } else if (cycle < 1500) {
-                    output = "World's Edge"
+                    output = map2
                     residual = 1500 - cycle
                 } else if (cycle < 1560) {
-                    output = "Olympus"
+                    output = map1
                     residual = 1560 - cycle
                 } else if (cycle < 1620) {
-                    output = "World's Edge"
+                    output = map2
                     residual = 1620 - cycle
                 } else if (cycle < 1710) {
-                    output = "Olympus"
+                    output = map1
                     residual = 1710 - cycle
                 } else if (cycle < 1800) {
-                    output = "World's Edge"
+                    output = map2
                     residual = 1800 - cycle
                 } else if (cycle < 1890) {
-                    output = "Olympus"
+                    output = map1
                     residual = 1890 - cycle
                 } else if (cycle < 1980) {
-                    output = "World Edge"
+                    output = map2
                     residual = 1980 - cycle
                 } else if (cycle < 2100) {
-                    output = "Olympus"
+                    output = map1
                     residual = 2100 - cycle
                 } else {
-                    output = "World's Edge"
+                    output = map2
                     residual = 2220 - cycle
                 }
 
