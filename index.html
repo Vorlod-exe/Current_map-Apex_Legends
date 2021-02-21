@@ -13,7 +13,7 @@
             color: aliceblue;
             text-align: center;
             line-height: 3em;
-            transform: translateY(40%);
+            transform: translateY(30%);
             }
         </style>
     </head>
@@ -24,7 +24,8 @@
 
         <h1><p id="map"></p></h1>
         <i><p id="timer"></p></i>
-        <br><small><p>Apex Legends : season 8</p></small>
+        <p id="next"></p>
+        <br><small><p>Apex Legends : saison 8</p></small>
 
         <script>
             function apexMap() {
@@ -34,79 +35,104 @@
 		var map2 = "Olympus"
 
                 var output
+                var next
 
                 if (cycle < 90) {
                     output = map1
                     residual = 90 - cycle
+                    next = "Next map : " + map2 + " (1h30)"
                 } else if (cycle < 180) {
                     output = map2
                     residual = 180 - cycle
+                    next = "Next map : " + map1 + " (1h30)"
                 } else if (cycle < 240) {
                     output = map1
                     residual = 240 - cycle
+                    next = "Next map : " + map2 + " (1h)"
                 } else if (cycle < 300) {
                     output = map2
                     residual = 300 - cycle
+                    next = "Next map : " + map1 + " (1h)"
                 } else if (cycle < 360) {
                     output = map1
                     residual = 360 - cycle
+                    next = "Next map : " + map2 + " (1h)"
                 } else if (cycle < 420) {
                     output = map2
                     residual = 420 - cycle
+                    next = "Next map : " + map1 + " (1h)"
                 } else if (cycle < 540) {
                     output = map1
                     residual = 540 - cycle
+                    next = "Next map : " + map2 + " (2h)"
                 } else if (cycle < 660) {
                     output = map2
                     residual = 660 - cycle
+                    next = "Next map : " + map1 + " (2h)"
                 } else if (cycle < 750) {
                     output = map1
                     residual = 750 - cycle
+                    next = "Next map : " + map2 + " (1h30)"
                 } else if (cycle < 840) {
                     output = Olympus
                     residual = 840 - cycle
+                    next = "Next map : " + map1 + " (1h30)"
                 } else if (cycle < 960) {
                     output = map1
                     residual = 960 - cycle
+                    next = "Next map : " + map2 + " (2h)"
                 } else if (cycle < 1080) {
                     output = map2
                     residual = 1080 - cycle
+                    next = "Next map : " + map1 + " (2h)"
                 } else if (cycle < 1170) {
                     output = map1
                     residual = 1170 - cycle
+                    next = "Next map : " + map2 + " (1h30)"
                 } else if (cycle < 1260) {
                     output = map2
                     residual = 1260 - cycle
+                    next = "Next map : " + map1 + " (1h30)"
                 } else if (cycle < 1380) {
                     output = map1
                     residual = 1380 - cycle
+                    next = "Next map : " + map2 + " (2h)"
                 } else if (cycle < 1500) {
                     output = map2
                     residual = 1500 - cycle
+                    next = "Next map : " + map1 + " (2h)"
                 } else if (cycle < 1560) {
                     output = map1
                     residual = 1560 - cycle
+                    next = "Next map : " + map2 + " (1h)"
                 } else if (cycle < 1620) {
                     output = map2
                     residual = 1620 - cycle
+                    next = "Next map : " + map1 + " (1h)"
                 } else if (cycle < 1710) {
                     output = map1
                     residual = 1710 - cycle
+                    next = "Next map : " + map2 + " (1h30)"
                 } else if (cycle < 1800) {
                     output = map2
                     residual = 1800 - cycle
+                    next = "Next map : " + map1 + " (1h30)"
                 } else if (cycle < 1890) {
                     output = map1
                     residual = 1890 - cycle
+                    next = "Next map : " + map2 + " (1h30)"
                 } else if (cycle < 1980) {
                     output = map2
                     residual = 1980 - cycle
+                    next = "Next map : " + map1 + " (1h30)"
                 } else if (cycle < 2100) {
                     output = map1
                     residual = 2100 - cycle
+                    next = "Next map : " + map2 + " (2h)"
                 } else {
                     output = map2
                     residual = 2220 - cycle
+                    next = "Next map : " + map1 + " (2h)"
                 }
 
                 if (residual >= 60){
@@ -133,6 +159,7 @@
                 
                 document.getElementById("map").innerHTML = output
                 document.getElementById("timer").innerHTML = timer
+                document.getElementById("next").innerHTML = next
             }
         </script>
     </body>
