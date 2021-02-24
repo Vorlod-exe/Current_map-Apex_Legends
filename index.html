@@ -24,15 +24,16 @@
 
         <h1><p id="map"></p></h1>
         <i><p id="timer"></p></i>
-	<h3><p id="next"></p></h3>
-        <br><small><p>Apex Legends : saison 8</p></small>
+	    <h3><p id="next"></p></h3>
+        <hr width="5%">
+        <small><p>Apex Legends : saison 8</p></small>
 
         <script>
             function apexMap() {
-                var cycle = ((new Date().getTime() / 60000) - 320) % 2200
+                var cycle = (new Date().getTime() / 60000) % 2220 + 420
 
-		var map1 = "Kings Canyon"
-		var map2 = "Olympus"
+		        var map1 = "Kings Canyon"
+		        var map2 = "Olympus"
 
                 var output
                 var next
@@ -44,7 +45,7 @@
                 } else if (cycle < 180) {
                     output = map2
                     residual = 180 - cycle
-                    next = "Next map : " + map1 + " (1h30)"
+                    next = "Next map : " + map1 + " (1h)"
                 } else if (cycle < 240) {
                     output = map1
                     residual = 240 - cycle
@@ -60,7 +61,7 @@
                 } else if (cycle < 420) {
                     output = map2
                     residual = 420 - cycle
-                    next = "Next map : " + map1 + " (1h)"
+                    next = "Next map : " + map1 + " (2h)"
                 } else if (cycle < 540) {
                     output = map1
                     residual = 540 - cycle
@@ -68,15 +69,15 @@
                 } else if (cycle < 660) {
                     output = map2
                     residual = 660 - cycle
-                    next = "Next map : " + map1 + " (2h)"
+                    next = "Next map : " + map1 + " (1h30)"
                 } else if (cycle < 750) {
                     output = map1
                     residual = 750 - cycle
                     next = "Next map : " + map2 + " (1h30)"
                 } else if (cycle < 840) {
-                    output = Olympus
+                    output = map2
                     residual = 840 - cycle
-                    next = "Next map : " + map1 + " (1h30)"
+                    next = "Next map : " + map1 + " (2h)"
                 } else if (cycle < 960) {
                     output = map1
                     residual = 960 - cycle
@@ -84,7 +85,7 @@
                 } else if (cycle < 1080) {
                     output = map2
                     residual = 1080 - cycle
-                    next = "Next map : " + map1 + " (2h)"
+                    next = "Next map : " + map1 + " (1h30)"
                 } else if (cycle < 1170) {
                     output = map1
                     residual = 1170 - cycle
@@ -92,23 +93,23 @@
                 } else if (cycle < 1260) {
                     output = map2
                     residual = 1260 - cycle
-                    next = "Next map : " + map1 + " (1h30)"
+                    next = "Next map : " + map1 + " (2h)"
                 } else if (cycle < 1380) {
                     output = map1
                     residual = 1380 - cycle
-                    next = "Next map : " + map2 + " (2h)"
+                    next = "Next map : " + map2 + " (1h)"
                 } else if (cycle < 1500) {
                     output = map2
                     residual = 1500 - cycle
-                    next = "Next map : " + map1 + " (2h)"
+                    next = "Next map : " + map1 + " (1h)"
                 } else if (cycle < 1560) {
                     output = map1
                     residual = 1560 - cycle
-                    next = "Next map : " + map2 + " (1h)"
+                    next = "Next map : " + map2 + " (1h30)"
                 } else if (cycle < 1620) {
                     output = map2
                     residual = 1620 - cycle
-                    next = "Next map : " + map1 + " (1h)"
+                    next = "Next map : " + map1 + " (1h30)"
                 } else if (cycle < 1710) {
                     output = map1
                     residual = 1710 - cycle
@@ -124,7 +125,7 @@
                 } else if (cycle < 1980) {
                     output = map2
                     residual = 1980 - cycle
-                    next = "Next map : " + map1 + " (1h30)"
+                    next = "Next map : " + map1 + " (2h)"
                 } else if (cycle < 2100) {
                     output = map1
                     residual = 2100 - cycle
@@ -132,7 +133,7 @@
                 } else {
                     output = map2
                     residual = 2220 - cycle
-                    next = "Next map : " + map1 + " (2h)"
+                    next = "Next map : " + map1 + " (1h30)"
                 }
 
                 if (residual >= 60){
